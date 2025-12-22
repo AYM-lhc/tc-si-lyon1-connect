@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logoTcsi from "@/assets/logo-tcsi.jpg";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,11 +24,12 @@ const Header = () => {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Navigation principale">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-md">
-            <div className="flex flex-col">
-              <span className="text-xl font-bold text-primary">BUT TC-SI</span>
-              <span className="text-xs text-muted-foreground">IUT Lyon 1</span>
-            </div>
+          <Link to="/" className="flex items-center focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-md">
+            <img 
+              src={logoTcsi} 
+              alt="BUT TC-SI - IUT Lyon 1" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
