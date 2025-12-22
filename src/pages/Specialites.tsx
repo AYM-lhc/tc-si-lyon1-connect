@@ -5,118 +5,116 @@ import { CheckCircle2, TrendingUp, Briefcase } from "lucide-react";
 const specialties = [
   {
     id: 1,
-    name: "Marketing & stratégie digitale",
-    color: "bg-blue-500",
-    description: "Maîtrisez les techniques du marketing moderne appliquées aux entreprises industrielles.",
+    name: "Marketing & stratégie commerciale",
+    color: "bg-primary",
+    description: "Développer la capacité à analyser les marchés industriels et à construire des offres commerciales simples, complexes puis étendues.",
     objectives: [
-      "Développer des stratégies marketing BtoB",
-      "Piloter des campagnes digitales multicanales",
-      "Analyser les comportements d'achat industriels"
+      "Analyser l'environnement économique, concurrentiel et client",
+      "Construire une offre commerciale cohérente et responsable",
+      "Intégrer la RSE et la veille dans la stratégie marketing"
     ],
     skills: [
-      "SEO/SEA et webmarketing",
-      "Marketing automation",
-      "Content marketing",
-      "Social media management",
-      "Analytics et KPIs"
+      "Étude de marché simple et complexe",
+      "Segmentation, ciblage, positionnement",
+      "Construction du mix marketing",
+      "Veille concurrentielle et technologique",
+      "Intégration des enjeux RSE"
     ],
     projects: [
-      "Création de stratégie marketing pour startup tech",
-      "Audit digital et plan d'action SEO",
-      "Campagne de lancement produit industriel"
+      "Étude de marché en contexte industriel",
+      "Conception d'une offre commerciale",
+      "Projet RSE et valorisation de déchets"
     ],
     careers: [
-      "Chef de produit digital",
-      "Traffic manager",
-      "Growth hacker",
-      "Consultant marketing BtoB"
+      "Chargé de marketing BtoB",
+      "Chef de produit",
+      "Consultant marketing industriel"
     ]
   },
   {
     id: 2,
-    name: "Vente & négociation industrielle",
-    color: "bg-orange-500",
-    description: "Devenez expert en techniques de vente et négociation dans l'univers industriel.",
+    name: "Vente & négociation BtoB",
+    color: "bg-accent",
+    description: "Former des professionnels capables de mener des ventes simples puis complexes dans des environnements industriels et concurrentiels.",
     objectives: [
-      "Maîtriser les techniques de vente complexe",
-      "Conduire des négociations commerciales stratégiques",
-      "Gérer un portefeuille clients BtoB"
+      "Préparer et conduire un entretien de vente",
+      "Négocier dans le respect d'un cahier des charges",
+      "Gérer un portefeuille clients professionnels"
     ],
     skills: [
-      "Techniques de vente consultative",
-      "Négociation BtoB avancée",
-      "Gestion de la relation client",
-      "Prospection et développement commercial",
-      "Commerce international"
+      "Découverte et analyse du besoin client",
+      "Argumentation commerciale",
+      "Négociation de prix et conditions",
+      "Vente complexe et internationale",
+      "Utilisation d'indicateurs de performance"
     ],
     projects: [
-      "Simulation de négociation internationale",
-      "Plan de prospection BtoB",
-      "Étude de satisfaction client"
+      "Simulation de négociation professionnelle",
+      "Prospection commerciale BtoB",
+      "Projet de vente complexe"
     ],
     careers: [
+      "Technico-commercial",
       "Ingénieur commercial",
       "Business developer",
-      "Account manager",
       "Responsable grands comptes"
     ]
   },
   {
     id: 3,
-    name: "Data & intelligence commerciale",
+    name: "Communication & relation client",
     color: "bg-green-500",
-    description: "Exploitez la puissance des données pour optimiser les performances commerciales.",
+    description: "Structurer une communication commerciale efficace et piloter la relation client dans une logique durable.",
     objectives: [
-      "Analyser et interpréter des données commerciales",
-      "Créer des tableaux de bord décisionnels",
-      "Piloter la performance par la data"
+      "Concevoir un plan de communication cohérent",
+      "Piloter la satisfaction et l'expérience client",
+      "Exploiter les outils de la relation client"
     ],
     skills: [
-      "Business Intelligence",
-      "Data mining et analyse prédictive",
-      "CRM et automation",
-      "Visualisation de données",
-      "Excel avancé et SQL"
+      "Communication commerciale",
+      "Plan de communication 360°",
+      "Communication digitale",
+      "Gestion des réclamations",
+      "Pilotage de la satisfaction client"
     ],
     projects: [
-      "Dashboard de pilotage des ventes",
-      "Analyse prédictive du churn client",
-      "Optimisation du pricing data-driven"
+      "Plan de communication globale",
+      "Création de supports commerciaux",
+      "Gestion de la relation client via CRM"
     ],
     careers: [
-      "Business analyst",
-      "Data analyst commercial",
-      "Consultant CRM",
-      "Revenue operations manager"
+      "Chargé de communication",
+      "Responsable relation client",
+      "Consultant CRM"
     ]
   },
   {
     id: 4,
-    name: "Automatisation & systèmes industriels",
+    name: "Culture industrielle & business développement",
     color: "bg-purple-500",
-    description: "Intégrez les technologies d'automatisation et d'Industrie 4.0 dans les processus commerciaux.",
+    description: "Développer une culture technique et industrielle permettant de dialoguer avec des interlocuteurs techniques et de participer à la stratégie commerciale.",
     objectives: [
-      "Comprendre les enjeux de l'Industrie 4.0",
-      "Commercialiser des solutions d'automatisation",
-      "Accompagner la transformation digitale"
+      "Comprendre les environnements industriels",
+      "Adapter une offre à une demande client complexe",
+      "Participer au développement commercial de l'entreprise"
     ],
     skills: [
-      "IoT et objets connectés",
-      "Robotique et automatisation",
-      "ERP et systèmes d'information",
-      "Maintenance prédictive",
-      "Gestion de projets techniques"
+      "Analyse technique d'une demande client",
+      "Lecture de cahiers des charges",
+      "Adaptation de l'offre",
+      "Travail en équipe projet",
+      "Management commercial"
     ],
     projects: [
-      "Étude de cas : déploiement IoT",
-      "Cahier des charges solution d'automatisation",
-      "Accompagnement transformation digitale PME"
+      "Projet entrepreneurial",
+      "Conception de solutions industrielles",
+      "Projet « Course en Cours »"
     ],
     careers: [
-      "Technico-commercial en automatisation",
-      "Chef de projet IoT",
-      "Consultant Industrie 4.0",
-      "Ingénieur avant-vente"
+      "Technico-commercial industriel",
+      "Chef de projet",
+      "Consultant Industrie",
+      "Ingénieur d'affaires"
     ]
   }
 ];
@@ -131,13 +129,13 @@ const Specialites = () => {
             Nos spécialités
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-            Le BUT TC-SI propose 4 parcours de spécialisation dès la 2e année, 
-            pour vous former aux métiers du commerce et du marketing industriel.
+            Le BUT TC-SI repose sur un parcours unique et progressif sur trois années.
+            La formation est organisée autour de compétences évaluées chaque année à travers des situations professionnelles, des projets et des mises en pratique concrètes.
           </p>
-          <div className="max-w-2xl mx-auto bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+          <div className="max-w-3xl mx-auto bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
             <p className="text-white/95">
-              <strong>Schéma de formation :</strong> Acquisition progressive des compétences → 
-              Mise en situation professionnelle → Insertion dans les métiers ciblés
+              Les enseignements évoluent au fil des années : certains modules apparaissent, d'autres se renforcent, 
+              afin de former des profils complets, à la fois commerciaux, techniques et stratégiques.
             </p>
           </div>
         </div>
@@ -156,27 +154,21 @@ const Specialites = () => {
               >
                 <div className={`h-2 ${specialty.color}`} aria-hidden="true"></div>
                 <CardHeader>
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex-1">
-                      <CardTitle className="text-2xl md:text-3xl mb-3">
-                        {specialty.name}
-                      </CardTitle>
-                      <CardDescription className="text-base">
-                        {specialty.description}
-                      </CardDescription>
-                    </div>
-                    <Badge variant="secondary" className="shrink-0">
-                      Parcours {specialty.id}
-                    </Badge>
+                  <div className="flex-1">
+                    <CardTitle className="text-2xl md:text-3xl mb-3">
+                      {specialty.name}
+                    </CardTitle>
+                    <CardDescription className="text-base">
+                      {specialty.description}
+                    </CardDescription>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <div className="grid md:grid-cols-2 gap-8">
-                    {/* Objectifs */}
                     <div>
                       <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
                         <TrendingUp className="h-5 w-5 text-primary" />
-                        Objectifs de la spécialité
+                        Objectifs
                       </h3>
                       <ul className="space-y-2">
                         {specialty.objectives.map((objective, idx) => (
@@ -187,32 +179,22 @@ const Specialites = () => {
                         ))}
                       </ul>
                     </div>
-
-                    {/* Compétences */}
                     <div>
                       <h3 className="text-lg font-semibold mb-3">Compétences acquises</h3>
                       <div className="flex flex-wrap gap-2">
                         {specialty.skills.map((skill, idx) => (
-                          <Badge key={idx} variant="outline">
-                            {skill}
-                          </Badge>
+                          <Badge key={idx} variant="outline">{skill}</Badge>
                         ))}
                       </div>
                     </div>
-
-                    {/* Exemples de projets */}
                     <div>
                       <h3 className="text-lg font-semibold mb-3">Exemples de projets</h3>
                       <ul className="space-y-2">
                         {specialty.projects.map((project, idx) => (
-                          <li key={idx} className="text-sm text-muted-foreground">
-                            • {project}
-                          </li>
+                          <li key={idx} className="text-sm text-muted-foreground">• {project}</li>
                         ))}
                       </ul>
                     </div>
-
-                    {/* Débouchés */}
                     <div>
                       <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
                         <Briefcase className="h-5 w-5 text-accent" />
@@ -235,20 +217,16 @@ const Specialites = () => {
         </div>
       </section>
 
-      {/* Section complémentaire */}
+      {/* Section conclusion */}
       <section className="py-16 bg-card border-y border-border">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              Une formation évolutive et personnalisée
+              Une formation professionnalisante
             </h2>
-            <p className="text-lg text-muted-foreground mb-4">
-              Les spécialités sont choisies en fin de 1ère année, après une première année commune 
-              qui vous permet de découvrir l'ensemble des domaines.
-            </p>
-            <p className="text-muted-foreground">
-              Chaque parcours peut être suivi en alternance dès la 2e année, 
-              pour une immersion complète en entreprise.
+            <p className="text-lg text-muted-foreground">
+              Une formation fondée sur des compétences évaluées, une progression pédagogique sur trois années 
+              et une double culture commerciale et industrielle unique.
             </p>
           </div>
         </div>

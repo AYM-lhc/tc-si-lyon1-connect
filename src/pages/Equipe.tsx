@@ -3,74 +3,74 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Search, Mail, Linkedin } from "lucide-react";
+import { Search, Linkedin } from "lucide-react";
 import teamImage from "@/assets/team-image.jpg";
 
-// Données exemple d'enseignants
+// Équipe pédagogique officielle
 const teachers = [
   {
     id: 1,
-    name: "Sophie Martin",
-    role: "Maître de conférences",
-    speciality: "Marketing digital",
-    courses: ["Marketing stratégique", "E-commerce", "Réseaux sociaux"],
-    email: "sophie.martin@univ-lyon1.fr",
-    linkedin: "#",
+    name: "FLAMANT Nicolas",
+    role: "Chef de département / Professeur de techniques",
+    speciality: "Mécanique",
+    courses: ["Techniques mécaniques", "Conception industrielle", "Analyse de systèmes mécaniques"],
+    linkedin: "https://linkedin.com",
+    showLinkedin: true,
     image: "/placeholder.svg"
   },
   {
     id: 2,
-    name: "Thomas Dubois",
-    role: "Professeur certifié",
-    speciality: "Systèmes industriels",
-    courses: ["Automatisation", "IoT", "Industrie 4.0"],
-    email: "thomas.dubois@univ-lyon1.fr",
-    linkedin: "#",
+    name: "LAURANT Fabienne",
+    role: "Professeure",
+    speciality: "Vente et Marketing",
+    courses: ["Techniques de vente", "Marketing opérationnel", "Négociation commerciale"],
+    linkedin: null,
+    showLinkedin: false,
     image: "/placeholder.svg"
   },
   {
     id: 3,
-    name: "Marie Lefebvre",
-    role: "Maître de conférences",
-    speciality: "Négociation commerciale",
-    courses: ["Techniques de vente", "Négociation B2B", "Relation client"],
-    email: "marie.lefebvre@univ-lyon1.fr",
-    linkedin: "#",
+    name: "SELO Catherine",
+    role: "Intervenante professionnelle",
+    speciality: "Communication 360°",
+    courses: ["Communication globale", "Stratégie de marque", "Communication digitale et événementielle"],
+    linkedin: "https://linkedin.com",
+    showLinkedin: true,
     image: "/placeholder.svg"
   },
   {
     id: 4,
-    name: "Pierre Durand",
-    role: "Intervenant professionnel",
-    speciality: "Data & Analytics",
-    courses: ["Business Intelligence", "Data Mining", "CRM"],
-    email: "pierre.durand@univ-lyon1.fr",
-    linkedin: "#",
+    name: "MARATIER Julien",
+    role: "Professeur",
+    speciality: "Économie et Gestion",
+    courses: ["Économie d'entreprise", "Gestion", "Analyse financière"],
+    linkedin: null,
+    showLinkedin: false,
     image: "/placeholder.svg"
   },
   {
     id: 5,
-    name: "Julie Bernard",
-    role: "Maître de conférences",
-    speciality: "Communication",
-    courses: ["Communication d'entreprise", "Marketing de contenu", "Storytelling"],
-    email: "julie.bernard@univ-lyon1.fr",
-    linkedin: "#",
+    name: "KOMBAYA Vital",
+    role: "Docteur et chercheur / Professeur",
+    speciality: "Robotique et Technologies de capteurs",
+    courses: ["Robotique industrielle", "Technologies des capteurs", "Excel avancé"],
+    linkedin: "https://linkedin.com",
+    showLinkedin: true,
     image: "/placeholder.svg"
   },
   {
     id: 6,
-    name: "Laurent Petit",
-    role: "Professeur certifié",
-    speciality: "Gestion de projet",
-    courses: ["Management de projet", "Agile & Scrum", "Innovation"],
-    email: "laurent.petit@univ-lyon1.fr",
-    linkedin: "#",
+    name: "BOUZID Mohammed",
+    role: "Professeur",
+    speciality: "Économie et Gestion",
+    courses: ["Économie d'entreprise", "Gestion", "Analyse financière"],
+    linkedin: null,
+    showLinkedin: false,
     image: "/placeholder.svg"
   },
 ];
 
-const specialties = ["Tous", "Marketing digital", "Systèmes industriels", "Négociation commerciale", "Data & Analytics", "Communication", "Gestion de projet"];
+const specialties = ["Tous", "Mécanique", "Vente et Marketing", "Communication 360°", "Économie et Gestion", "Robotique et Technologies de capteurs"];
 
 const Equipe = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -181,31 +181,20 @@ const Equipe = () => {
                         ))}
                       </ul>
                     </div>
-                    <div className="flex gap-2 pt-2 border-t border-border">
-                      <a 
-                        href={`mailto:${teacher.email}`}
-                        className="flex items-center gap-1 text-sm text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-ring rounded"
-                        aria-label={`Envoyer un email à ${teacher.name}`}
-                      >
-                        <Mail className="h-4 w-4" />
-                        Email
-                      </a>
-                      {teacher.linkedin && (
-                        <>
-                          <span className="text-muted-foreground">•</span>
-                          <a 
-                            href={teacher.linkedin}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-1 text-sm text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-ring rounded"
-                            aria-label={`Voir le profil LinkedIn de ${teacher.name}`}
-                          >
-                            <Linkedin className="h-4 w-4" />
-                            LinkedIn
-                          </a>
-                        </>
-                      )}
-                    </div>
+                    {teacher.showLinkedin && teacher.linkedin && (
+                      <div className="flex gap-2 pt-2 border-t border-border">
+                        <a 
+                          href={teacher.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1 text-sm text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-ring rounded"
+                          aria-label={`Voir le profil LinkedIn de ${teacher.name}`}
+                        >
+                          <Linkedin className="h-4 w-4" />
+                          LinkedIn
+                        </a>
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
               ))}
