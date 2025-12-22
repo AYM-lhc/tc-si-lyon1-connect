@@ -5,17 +5,17 @@ import { Quote, Building2, MapPin } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    name: "Lucas",
-    company: "Schneider Electric",
+    name: "Mouhad",
+    company: "BASF",
     position: "Alternant Commercial BtoB",
-    location: "Grenoble",
-    quote: "L'alternance m'a permis de mettre en pratique immédiatement mes connaissances. Je gère aujourd'hui un portefeuille clients en autonomie.",
+    location: "Lyon",
+    quote: "L'alternance m'a permis de mettre en pratique immédiatement mes connaissances. J'ai pu développer une réelle autonomie et comprendre les enjeux commerciaux dans un environnement industriel exigeant.",
     year: "3e année"
   },
   {
     id: 2,
-    name: "Emma",
-    company: "Siemens",
+    name: "Manon",
+    company: "JTEKT",
     position: "Alternante Marketing Digital",
     location: "Lyon",
     quote: "Grâce au BUT TC-SI, j'ai découvert le marketing industriel et l'automatisation. Mon entreprise me confie des missions de plus en plus stratégiques.",
@@ -23,47 +23,47 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "Thomas",
-    company: "Festo",
+    name: "Aymen",
+    company: "Bosch Rexroth",
     position: "Alternant Technico-commercial",
-    location: "Villeurbanne",
-    quote: "Le mélange entre commerce et technique est parfait. Je conseille des solutions d'automatisation tout en comprenant les enjeux techniques.",
+    location: "Vénissieux",
+    quote: "Le mélange entre commerce et technique est un vrai atout. Je conseille des solutions industrielles tout en comprenant les contraintes techniques des clients.",
     year: "3e année"
   },
   {
     id: 4,
-    name: "Sarah",
-    company: "ABB",
-    position: "Alternante Business Intelligence",
+    name: "Idris",
+    company: "SWEGON",
+    position: "Alternant Business Intelligence",
     location: "Lyon",
-    quote: "J'analyse les données commerciales et crée des dashboards pour l'équipe vente. Une expérience enrichissante dans un grand groupe international.",
+    quote: "J'analyse les données commerciales et je crée des tableaux de bord pour les équipes. Cette expérience me permet de développer des compétences très recherchées dans le secteur industriel.",
     year: "3e année"
   },
 ];
 
 const companies = [
+  { name: "BASF", sector: "Chimie industrielle", location: "Lyon", logo: "/placeholder.svg" },
+  { name: "JTEKT", sector: "Équipements automobiles", location: "Lyon", logo: "/placeholder.svg" },
+  { name: "Bosch Rexroth", sector: "Systèmes d'entraînement", location: "Vénissieux", logo: "/placeholder.svg" },
+  { name: "SWEGON", sector: "Climatisation industrielle", location: "Lyon", logo: "/placeholder.svg" },
   { name: "Schneider Electric", sector: "Automatisation industrielle", location: "Grenoble", logo: "/placeholder.svg" },
   { name: "Siemens", sector: "Technologies industrielles", location: "Lyon", logo: "/placeholder.svg" },
   { name: "ABB", sector: "Robotique & automation", location: "Lyon", logo: "/placeholder.svg" },
   { name: "Festo", sector: "Automatisation pneumatique", location: "Villeurbanne", logo: "/placeholder.svg" },
-  { name: "Bosch Rexroth", sector: "Systèmes d'entraînement", location: "Vénissieux", logo: "/placeholder.svg" },
-  { name: "Legrand", sector: "Infrastructures électriques", location: "Limonest", logo: "/placeholder.svg" },
-  { name: "Parker Hannifin", sector: "Technologies motion & control", location: "Lyon", logo: "/placeholder.svg" },
-  { name: "Rockwell Automation", sector: "Automatisation industrielle", location: "Lyon", logo: "/placeholder.svg" },
 ];
 
 const companyTestimonials = [
   {
-    company: "Schneider Electric",
-    sector: "Automatisation industrielle",
+    company: "BASF",
+    sector: "Chimie industrielle",
     quote: "Les alternants du BUT TC-SI sont opérationnels rapidement. Leur double compétence commerce-technique est un vrai atout.",
     missions: ["Développement commercial", "Support avant-vente", "Animation de formations client"]
   },
   {
-    company: "Siemens",
-    sector: "Technologies industrielles",
+    company: "Bosch Rexroth",
+    sector: "Systèmes d'entraînement",
     quote: "Nous accueillons chaque année plusieurs étudiants TC-SI. Leur formation correspond parfaitement à nos besoins en BtoB industriel.",
-    missions: ["Marketing digital", "Gestion de projet", "Analyse de données"]
+    missions: ["Technico-commercial", "Gestion de projet", "Analyse de données"]
   },
 ];
 

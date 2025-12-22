@@ -1,96 +1,156 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ExternalLink, Github } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import projectsImage from "@/assets/projects-image.jpg";
 
-// Données exemple de projets
+// Projets officiels du BUT TC-SI
 const projects = [
+  // 1ère année
   {
     id: 1,
     year: "1",
-    title: "Campagne marketing pour startup IoT",
-    promo: "2023-2024",
-    description: "Création d'une stratégie marketing complète pour une startup spécialisée dans les objets connectés industriels.",
-    skills: ["Marketing digital", "Réseaux sociaux", "Analyse de marché"],
-    technologies: ["Google Analytics", "Canva", "Mailchimp"],
-    supervisors: ["Sophie Martin", "Thomas Dubois"],
-    theme: "Marketing",
-    image: "/placeholder.svg"
+    title: "Projet de conception – Luminaires",
+    promo: "2023–2024",
+    description: "Projet de conception et de communication mené en partenariat avec une entreprise. Les étudiants conçoivent des luminaires en respectant un cahier des charges professionnel intégrant des contraintes techniques, esthétiques et fonctionnelles, tout en valorisant leur solution par une communication adaptée.",
+    skills: ["Conception produit", "Analyse technique", "Design industriel", "Communication de projet"],
+    technologies: ["Logiciels de conception 3D", "Outils de prototypage", "Supports de communication"],
+    supervisors: ["Équipe pédagogique BUT TC-SI"],
+    theme: "Conception",
+    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
   },
   {
     id: 2,
     year: "1",
-    title: "Étude de marché : Industrie 4.0 en Auvergne-Rhône-Alpes",
-    promo: "2023-2024",
-    description: "Analyse des besoins et opportunités du marché régional en matière de transformation digitale industrielle.",
-    skills: ["Étude de marché", "Enquêtes", "Analyse statistique"],
-    technologies: ["Excel", "Google Forms", "Power BI"],
-    supervisors: ["Marie Lefebvre"],
-    theme: "Data",
-    image: "/placeholder.svg"
+    title: "Projet RSE – Valorisation des déchets",
+    promo: "2024–2025",
+    description: "Projet annuel présenté sous forme de stand. Les étudiants travaillent sur la valorisation des déchets d'une entreprise autour des enjeux du recyclage et de la responsabilité sociétale des entreprises. Chaque groupe conçoit un objet à partir de déchets industriels et crée une entreprise de conseil associée.",
+    skills: ["Gestion de projet", "Responsabilité sociétale (RSE)", "Création d'entreprise", "Communication événementielle"],
+    technologies: ["Outils de gestion de projet", "Logiciels de communication visuelle", "Supports de présentation"],
+    supervisors: ["Équipe pédagogique BUT TC-SI"],
+    theme: "RSE",
+    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
   },
+  // 2ème année
   {
     id: 3,
     year: "2",
-    title: "Automatisation d'un processus commercial B2B",
-    promo: "2022-2023",
-    description: "Mise en place d'un CRM et automatisation du parcours client pour une entreprise industrielle de 150 salariés.",
-    skills: ["CRM", "Automatisation", "Gestion de projet"],
-    technologies: ["Salesforce", "Zapier", "Python"],
-    supervisors: ["Pierre Durand", "Laurent Petit"],
-    theme: "Automatisation",
-    github: "#",
-    image: "/placeholder.svg"
+    title: "Projet entrepreneurial",
+    promo: "2024–2025",
+    description: "Les étudiants imaginent une idée innovante et originale n'existant pas encore sur le marché. Le projet inclut la conception du produit, sa modélisation 3D et l'élaboration d'un business plan complet, présenté devant un jury de professionnels et d'anciens dirigeants.",
+    skills: ["Innovation", "Business development", "Modélisation économique", "Prise de parole professionnelle"],
+    technologies: ["Logiciels de conception 3D", "Outils de business plan", "Supports de présentation", "Outils de prototypage"],
+    supervisors: ["Équipe pédagogique et jury professionnel"],
+    theme: "Entrepreneuriat",
+    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
   },
   {
     id: 4,
     year: "2",
-    title: "Négociation et contrat international",
-    promo: "2022-2023",
-    description: "Simulation de négociation commerciale avec un client étranger pour l'export de machines industrielles.",
-    skills: ["Négociation", "Commerce international", "Anglais commercial"],
-    technologies: ["Simulation professionnelle"],
-    supervisors: ["Marie Lefebvre"],
-    theme: "Vente",
-    image: "/placeholder.svg"
+    title: "Projet de conception de voitures – Course en Cours",
+    promo: "2024–2025",
+    description: "Projet technique et créatif basé sur le concours national « Course en Cours ». Les étudiants conçoivent une voiture miniature répondant à un cahier des charges strict, de la modélisation à la fabrication, jusqu'au fonctionnement réel du véhicule, en intégrant une identité visuelle et une communication originale.",
+    skills: ["Conception mécanique", "Gestion de projet", "Fabrication et prototypage", "Communication et design"],
+    technologies: ["Conception 3D", "Impression 3D"],
+    supervisors: ["Équipe pédagogique et jury professionnel"],
+    theme: "Technique",
+    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
   },
+  // 3ème année
   {
     id: 5,
     year: "3",
-    title: "Création d'une plateforme e-commerce B2B",
-    promo: "2021-2022",
-    description: "Conception et déploiement d'une plateforme de vente en ligne pour pièces industrielles avec espace client personnalisé.",
-    skills: ["E-commerce", "UX/UI", "Gestion de projet web"],
-    technologies: ["Shopify", "Figma", "JavaScript"],
-    supervisors: ["Sophie Martin", "Laurent Petit"],
-    theme: "Marketing",
-    github: "#",
-    portfolio: "#",
-    image: "/placeholder.svg"
+    title: "Projet de négociation acheteur",
+    promo: "2024–2025",
+    description: "Les étudiants se placent dans la posture d'un acheteur professionnel. À l'aide d'une plateforme de simulation, ils sélectionnent des fournisseurs, négocient les conditions d'achat, anticipent les risques et prennent en compte les contraintes économiques et géographiques.",
+    skills: ["Négociation B2B", "Analyse des risques", "Stratégie d'achat", "Prise de décision"],
+    technologies: ["Plateforme de simulation", "Outils d'analyse"],
+    supervisors: ["Équipe pédagogique BUT TC-SI"],
+    theme: "Négociation",
+    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
   },
   {
     id: 6,
     year: "3",
-    title: "Stratégie data-driven pour l'optimisation des ventes",
-    promo: "2021-2022",
-    description: "Analyse prédictive des ventes et recommandations stratégiques basées sur l'exploitation de données CRM.",
-    skills: ["Data science", "Business Intelligence", "Recommandations stratégiques"],
-    technologies: ["Python", "Tableau", "SQL"],
-    supervisors: ["Pierre Durand"],
-    theme: "Data",
-    github: "#",
-    image: "/placeholder.svg"
+    title: "Projet associatif et gestion de services étudiants",
+    promo: "2024–2025",
+    description: "Chaque groupe de la promotion gère une association ou un service étudiant, en assurant l'organisation, la communication et le suivi des actions menées tout au long de l'année. Groupes possibles : Voyage, Communication, AideTU (aide alimentaire et hygiénique), Alumni, Salon de l'Étudiant, Erasmus, TC-SI Sport, Cordée de la Réussite.",
+    skills: ["Gestion associative", "Organisation d'événements", "Travail en équipe", "Communication"],
+    technologies: ["Outils collaboratifs", "Supports de communication"],
+    supervisors: ["Équipe pédagogique BUT TC-SI"],
+    theme: "Projet associatif",
+    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
   },
 ];
 
-const themes = ["Tous", "Marketing", "Vente", "Data", "Automatisation"];
+// Composant Carrousel d'images
+const ImageCarousel = ({ images, title }: { images: string[]; title: string }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextImage = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  return (
+    <div className="relative w-full h-48 group">
+      <img 
+        src={images[currentIndex]} 
+        alt={`${title} - Image ${currentIndex + 1}`}
+        className="w-full h-full object-cover rounded-t-lg bg-secondary"
+      />
+      {images.length > 1 && (
+        <>
+          <button
+            onClick={prevImage}
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+            aria-label="Image précédente"
+          >
+            <ChevronLeft className="h-4 w-4" />
+          </button>
+          <button
+            onClick={nextImage}
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+            aria-label="Image suivante"
+          >
+            <ChevronRight className="h-4 w-4" />
+          </button>
+          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+            {images.map((_, idx) => (
+              <span
+                key={idx}
+                className={`w-2 h-2 rounded-full ${idx === currentIndex ? 'bg-primary' : 'bg-background/60'}`}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+};
 
 const Projets = () => {
   const [selectedYear, setSelectedYear] = useState("1");
   const [selectedTheme, setSelectedTheme] = useState("Tous");
+
+  // Générer les thèmes dynamiquement basés sur les projets de l'année sélectionnée
+  const availableThemes = useMemo(() => {
+    const projectsForYear = projects.filter(p => p.year === selectedYear);
+    const themes = [...new Set(projectsForYear.map(p => p.theme))];
+    return ["Tous", ...themes];
+  }, [selectedYear]);
+
+  // Réinitialiser le thème si non disponible
+  useMemo(() => {
+    if (!availableThemes.includes(selectedTheme)) {
+      setSelectedTheme("Tous");
+    }
+  }, [availableThemes, selectedTheme]);
 
   const filteredProjects = projects.filter((project) => {
     const matchesYear = project.year === selectedYear;
@@ -115,8 +175,8 @@ const Projets = () => {
             Projets étudiants
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            Découvrez les réalisations concrètes de nos étudiants : études de cas, campagnes marketing, 
-            automatisations et projets innovants menés en partenariat avec des entreprises.
+            Découvrez les réalisations concrètes de nos étudiants : projets de conception, RSE, 
+            entrepreneuriat et négociation menés en partenariat avec des entreprises.
           </p>
         </div>
       </section>
@@ -132,9 +192,9 @@ const Projets = () => {
                 <TabsTrigger value="3">3ème année</TabsTrigger>
               </TabsList>
 
-              {/* Filtres par thématique */}
+              {/* Filtres par thématique - dynamiques */}
               <div className="flex flex-wrap gap-2">
-                {themes.map((theme) => (
+                {availableThemes.map((theme) => (
                   <Button
                     key={theme}
                     variant={selectedTheme === theme ? "default" : "outline"}
@@ -154,12 +214,7 @@ const Projets = () => {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {filteredProjects.map((project) => (
                     <Card key={project.id} className="shadow-card border-border hover:shadow-elegant transition-all flex flex-col">
-                      <img 
-                        src={project.image} 
-                        alt=""
-                        className="w-full h-48 object-cover rounded-t-lg bg-secondary"
-                        aria-hidden="true"
-                      />
+                      <ImageCarousel images={project.images} title={project.title} />
                       <CardHeader>
                         <div className="flex items-start justify-between gap-2 mb-2">
                           <Badge variant="secondary">{project.theme}</Badge>
@@ -187,42 +242,12 @@ const Projets = () => {
                           </p>
                         </div>
 
-                        <div className="mb-4">
+                        <div>
                           <h4 className="text-sm font-semibold mb-2">Encadrants :</h4>
                           <p className="text-sm text-muted-foreground">
                             {project.supervisors.join(", ")}
                           </p>
                         </div>
-
-                        {(project.github || project.portfolio) && (
-                          <div className="flex gap-2 pt-4 border-t border-border">
-                            {project.github && (
-                              <a 
-                                href={project.github}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-1 text-sm text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-ring rounded"
-                              >
-                                <Github className="h-4 w-4" />
-                                Code
-                              </a>
-                            )}
-                            {project.portfolio && (
-                              <>
-                                {project.github && <span className="text-muted-foreground">•</span>}
-                                <a 
-                                  href={project.portfolio}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="flex items-center gap-1 text-sm text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-ring rounded"
-                                >
-                                  <ExternalLink className="h-4 w-4" />
-                                  Voir le projet
-                                </a>
-                              </>
-                            )}
-                          </div>
-                        )}
                       </CardContent>
                     </Card>
                   ))}
