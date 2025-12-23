@@ -31,7 +31,7 @@ const projects = [
     technologies: ["Outils de gestion de projet", "Logiciels de communication visuelle", "Supports de présentation"],
     supervisors: ["Équipe pédagogique BUT TC-SI"],
     theme: "RSE",
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
+    images: ["../src/assets/carrousel projet 1/projet11.png", "../src/assets/carrousel projet 1/projet112.png", "../src/assets/carrousel projet 1/projet113.png"]
   },
   // 2ème année
   {
