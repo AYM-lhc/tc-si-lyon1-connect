@@ -31,7 +31,7 @@ const projects = [
     technologies: ["Outils de gestion de projet", "Logiciels de communication visuelle", "Supports de présentation"],
     supervisors: ["Équipe pédagogique BUT TC-SI"],
     theme: "RSE",
-    images: ["/carrousel-projet-1/projet11.png", "/carrousel-projet-1/projet112.png", "/carrousel-projet-1/projet113.png"]
+    images: ["/carrousel-projet-1/carrousel-projet-1/projet11.png", "/carrousel-projet-1/carrousel-projet-1/projet112.png", "/carrousel-projet-1/carrousel-projet-1/projet113.png"]
   },
   // 2ème année
   {
@@ -56,7 +56,7 @@ const projects = [
     technologies: ["Conception 3D", "Impression 3D"],
     supervisors: ["Équipe pédagogique et jury professionnel"],
     theme: "Technique",
-    images: ["/carrousel-projet-1/projet211.png", "/carrousel-projet-1/projet212.png", "/carrousel-projet-1/projet213.png"]
+    images: ["/carrousel-projet-1/carrousel-projet-1/projet211.png", "/carrousel-projet-1/carrousel-projet-1/projet212.png", "/carrousel-projet-1/carrousel-projet-1/projet213.png"]
   },
   // 3ème année
   {
@@ -69,7 +69,7 @@ const projects = [
     technologies: ["Plateforme de simulation", "Outils d'analyse"],
     supervisors: ["Équipe pédagogique BUT TC-SI"],
     theme: "Négociation",
-    images: ["/carrousel-projet-1/COMPIT.png"]
+    images: ["/carrousel-projet-1/carrousel-projet-1/COMPIT.png"]
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ const projects = [
     technologies: ["Outils collaboratifs", "Supports de communication"],
     supervisors: ["Équipe pédagogique BUT TC-SI"],
     theme: "Projet associatif",
-    images: ["/carrousel-projet-1/aidetu.jpg", "/carrousel-projet-1/tcsport.jpg", "/carrousel-projet-1/voyage.jpg"]
+    images: ["/carrousel-projet-1/carrousel-projet-1/aidetu.jpg", "/carrousel-projet-1/carrousel-projet-1/tcsport.jpg", "/carrousel-projet-1/carrousel-projet-1/voyage.jpg"]
   },
 ];
 
