@@ -30,6 +30,7 @@ const Header = () => {
               alt="BUT TC-SI - IUT Lyon 1" 
               className="h-12 w-auto"
             />
+            <span className="ml-3 text-lg font-semibold text-primary">IUT LYON 1</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -16,7 +16,7 @@ const teachers = [
     courses: ["Techniques mécaniques", "Conception industrielle", "Analyse de systèmes mécaniques"],
     linkedin: "https://linkedin.com",
     showLinkedin: true,
-    image: "/placeholder.svg"
+    image: "../src/assets/imgequipe/flamant.png"
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const teachers = [
     courses: ["Techniques de vente", "Marketing opérationnel", "Négociation commerciale"],
     linkedin: null,
     showLinkedin: false,
-    image: "/placeholder.svg"
+    image: "../src/assets/imgequipe/laurant.png"
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ const teachers = [
     courses: ["Économie d'entreprise", "Gestion", "Analyse financière"],
     linkedin: null,
     showLinkedin: false,
-    image: "/placeholder.svg"
+    image: "../src/assets/imgequipe/maratier.png"
   },
   {
     id: 5,
@@ -56,7 +56,7 @@ const teachers = [
     courses: ["Robotique industrielle", "Technologies des capteurs", "Excel avancé"],
     linkedin: "https://linkedin.com",
     showLinkedin: true,
-    image: "/placeholder.svg"
+    image: "../src/assets/imgequipe/kombaya.png"
   },
   {
     id: 6,
@@ -66,7 +66,7 @@ const teachers = [
     courses: ["Économie d'entreprise", "Gestion", "Analyse financière"],
     linkedin: null,
     showLinkedin: false,
-    image: "/placeholder.svg"
+    image: "../src/assets/imgequipe/bouzid.png"
   },
 ];
 

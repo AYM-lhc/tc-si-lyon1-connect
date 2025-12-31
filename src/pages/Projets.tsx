@@ -56,7 +56,7 @@ const projects = [
     technologies: ["Conception 3D", "Impression 3D"],
     supervisors: ["Équipe pédagogique et jury professionnel"],
     theme: "Technique",
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
+    images: ["../src/assets/carrousel projet 1/projet211.png", "../src/assets/carrousel projet 1/projet212.png", "../src/assets/carrousel projet 1/projet213.png"]
   },
   // 3ème année
   {
@@ -69,7 +69,7 @@ const projects = [
     technologies: ["Plateforme de simulation", "Outils d'analyse"],
     supervisors: ["Équipe pédagogique BUT TC-SI"],
     theme: "Négociation",
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
+    images: ["../src/assets/carrousel projet 1/COMPIT.png"]
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ const projects = [
     technologies: ["Outils collaboratifs", "Supports de communication"],
     supervisors: ["Équipe pédagogique BUT TC-SI"],
     theme: "Projet associatif",
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"]
+    images: ["../src/assets/carrousel projet 1/aidetu.jpg", "../src/assets/carrousel projet 1/tcsport.jpg", "../src/assets/carrousel projet 1/voyage.jpg"]
   },
 ];
 
@@ -98,11 +98,11 @@ const ImageCarousel = ({ images, title }: { images: string[]; title: string }) =
   };
 
   return (
-    <div className="relative w-full h-48 group">
+    <div className="relative w-full group">
       <img 
         src={images[currentIndex]} 
         alt={`${title} - Image ${currentIndex + 1}`}
-        className="w-full h-full object-cover rounded-t-lg bg-secondary"
+        className="w-full h-96 object-center object-cover rounded-t-lg bg-secondary"
       />
       {images.length > 1 && (
         <>

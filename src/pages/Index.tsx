@@ -17,8 +17,11 @@ const Index = () => {
             aria-hidden="true"
           />
         </div>
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
           <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              IUT Lyon 1
+            </h1>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               BUT TC-SI
             </h1>
@@ -29,19 +32,6 @@ const Index = () => {
               Formez-vous aux métiers du commerce et du marketing appliqués aux systèmes industriels. 
               Une formation en 3 ans alliant compétences commerciales et techniques, avec possibilité d'alternance.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Link to="/specialites">
-                <Button size="lg" variant="secondary" className="shadow-elegant">
-                  Découvrir la formation
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link to="/projets">
-                <Button size="lg" variant="outline" className="bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm">
-                  Voir les projets
-                </Button>
-              </Link>
-            </div>
           </div>
         </div>
       </section>
@@ -107,8 +97,77 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Stages et débouchés */}
+      <section className="py-16 md:py-24 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Stages et débouchés</h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <Card className="shadow-card border-border hover:shadow-elegant transition-all min-h-[200px]">
+              <CardHeader>
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Briefcase className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="text-center">Stage ouvrier 1ère année</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Stage de 4 semaines en première année pour découvrir le métier d'ouvrier et 
+                  comprendre les réalités du terrain industriel.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-card border-border hover:shadow-elegant transition-all min-h-[200px]">
+              <CardHeader>
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Users className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="text-center">Stage commercial 2ème année</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Possibilité de stage commercial de 10 semaines en deuxième année pour développer 
+                  vos compétences en vente et relation client.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-card border-border hover:shadow-elegant transition-all min-h-[200px]">
+              <CardHeader>
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <BookOpen className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="text-center">Poursuite<br />d'études</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Possibilité de poursuite d'études en master dans les domaines du commerce, 
+                  du marketing, de la gestion ou de l'ingénierie industrielle.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-card border-border hover:shadow-elegant transition-all min-h-[200px]">
+              <CardHeader>
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Award className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="text-center">Métiers après le BUT</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Chargé d'affaires, technico-commercial, responsable des ventes, 
+                  chef de produit, ou encore conseiller commercial dans l'industrie.
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Points forts */}
-      <section className="py-16 md:py-24">
+      <section className="py-8 md:py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Nos points forts</h2>
           
@@ -176,11 +235,6 @@ const Index = () => {
               <Button size="lg" className="shadow-elegant">
                 Découvrir les spécialités
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button size="lg" variant="outline">
-                Nous contacter
               </Button>
             </Link>
           </div>
